@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Simulator
+    </title>
+    <style>  
+        .light{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Traffic Light Simulator</h1>
+<p>Click the button to simulate a traffic light:</p>
+<button onclick="changeTrafficLight()">Change Light</button>
+
+    <div id="redLight" class="light"></div>
+    <div id="yellowLight" class="light"></div>
+    <div id="greenLight" class="light"></div>
+ 
+<script>
+    let currentLight="red";
+    function changeTrafficLight(){
+        const redLight=document.getElementById('redLight');
+        const yellowLight=document.getElementById('yellowLight');
+        const greenLight=document.getElementById('greenLight');
+        switch(currentLight){
+            case "red":
+                redLight.style.backgroundColor="red";
+                yellowLight.style.backgroundColor="black";
+                greenLight.style.backgroundColor="black";
+                currentLight="yellow";
+                break;
+            case "yellow":
+                redLight.style.backgroundColor="black";
+                yellowLight.style.backgroundColor="yellow";
+                greenLight.style.backgroundColor="black";
+                currentLight="green";
+                break;
+            case "green":
+                redLight.style.backgroundColor="black";
+                yellowLight.style.backgroundColor="black";
+                greenLight.style.backgroundColor="green";
+                currentLight="red";
+                break;
+               default:
+                redLight.style.backgroundColor="black";
+                yellowLight.style.backgroundColor="black";
+                greenLight.style.backgroundColor="black";
+                currentLight="red";
+                break;
+
+        }
+
+    }
+</script>
+</body>
+</html>

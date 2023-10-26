@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Check 1 to 10 program</h1>
+        <input type="text" name="input" id="input">
+        <button onclick="chck()">Click here</button>
+        <h3>results : <span style="background-color: aqua;padding: 10px;" id="out"></span></h3>
+            </div>
+            <script>
+                function chck(){
+                    var x=parseInt(document.getElementById("input").value);
+                    if(isNaN(x) || (x<1) || (x>10)){
+                        document.getElementById("out").innerHTML="this is not a valide number";
+                    }
+                    
+                    else{
+                        document.getElementById("out").innerHTML="ok valid this number between 1 to 10 only ";
+                    }
+        
+                }
+            </script>
+</body>
+</html>

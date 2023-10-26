@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>If statement</h1>
+    <label for=""> your age</label>
+    <input type="age" placeholder="Your Age" id="haf" required>
+    <p><button onclick="check()">Check</button></p>
+    <p id="result">Result:</p>
+    <script>
+       
+        function check(){
+            var age=document.getElementById("haf").value
+
+        if(age >=18){
+            document.getElementById("result").innerHTML="You are eligible for voting"
+        }else {
+            document.getElementById("result").innerHTML="You are not eligible for voting"
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript switch statement example</title>
+</head>
+<body>
+
+
+<h1>positive or negative</h1>
+<input type="number" id="numberinput">
+<button id="checkbutton">check</button>
+<p id="result"></p>
+<script>
+    document.getElementById('checkbutton').addEventListener('click',
+    function(){
+        var number=parseFloat(document.getElementById('numberinput').value);
+        var resultelement =
+        document.getElementById('result');
+        if(isNaN(number)){
+            resultelement.textContent="please enter a valid number.";
+
+        }else if (number>0){
+            resultelement.textContent="The number is positive.";
+        }else if (number < 0){
+            resultelement.textContent="The number is negative.";
+
+        }else{
+            resultelement.textContent="The number is zero.";
+        }
+
+
+    }
+    
+    );
+</script>
+</body>
+</html>

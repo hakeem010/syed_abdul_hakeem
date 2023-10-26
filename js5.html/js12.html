@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>switch</h1>
+        <input type="number" id="input">
+        <button onclick="check()">Check</button>
+        <h3 id="out">result:</h3>
+        </div>
+
+        <script>
+            function check(){
+                var x=parseInt(document.getElementById("input").value);
+                switch(true){
+                    case isNaN(x):
+                        document.getElementById("out").innerHTML="this is not a number";
+                        break;
+                        case x<1:
+                        document.getElementById("out").innerHTML="Given number is lessthan 1";
+                        break;
+                        case x>10:
+                        document.getElementById("out").innerHTML="Given number is greater than 10";
+                        break;
+                        default :
+                        document.getElementById("out").innerHTML="ok! it is between 1 to 10";
+    
+                }
+            }
+        </script>
+</body>
+</html>
